@@ -1,0 +1,455 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "popppins", sans-serif;
+}
+:root {
+  --c1: #00dd00;
+  --c2: #107400;
+  --bg: #ffecc0;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  background: var(--bg);
+}
+
+/* header */
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+#option {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  color: white;
+  font-weight: 650;
+  text-shadow: -1px -1px black,
+  -1px 1px black,
+  1px -1px black,
+  1px 1px black;
+}
+.logo {
+  font-size: 22px;
+  color: white;
+  text-shadow: black 2px 2px 3px;
+  font-weight: 650;
+  margin-left: 18px;
+}
+.navbar {
+  margin-right: 20px;
+}
+.navbar a {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-shadow: black 2px 2px 3px;
+  margin: 18px;
+}
+.navbar a:hover {
+  color: var(--c1);
+}
+
+/* content */
+
+section {
+  min-height: 100vh;
+  padding: 4rem 9% 2rem;
+}
+
+/* home section */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12%;
+  background: url("img1.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.homecont{
+  padding: 5%;
+  text-align: center;
+}
+.home .homecont h1{
+  font-family: 'Exo 2', sans-serif;
+    font-size: 5.5rem;
+    color:var(--c2);
+}
+.home .homecont h3{
+  font-family: 'Merriweather', serif;
+  color: transparent;
+  font-size: 1.5rem;
+  animation: pop 5s infinite;
+}
+.homecont p{
+  color: rgba(92, 91, 91, 0.904);
+  font-size: 1.2rem;
+  width: 55vw;
+  margin-top: 1.5rem;
+}
+@keyframes pop{
+  from,t0{color:transparent;}
+  20%{color: var(--c1);}
+  80%{color: var(--c1);}
+}
+.homecont h1 #cold{
+  position: relative;
+  top: -5rem;
+  color: orange;
+  animation: drop 5s infinite forwards;
+}
+@keyframes drop{
+  from{
+    top:-5rem;rotate: 0deg;color:orange;
+  }
+  15%{
+    top:0;rotate: 0deg;
+  }
+  25%{
+    rotate:-25deg;
+  }
+  40%{
+    rotate:25deg;
+  }
+  50%{
+    rotate:0deg;
+  }
+  75%{
+    color: orange;
+  }
+  76%{
+    color: transparent;
+  }
+  to{
+    top:0;rotate: 0deg;color: transparent;
+  }
+
+}
+.homecont h1 .name1{
+  font-family: 'Exo 2', sans-serif;
+  position: relative;
+  overflow: hidden;
+  left:-4rem;
+  animation: popx 5s infinite forwards ;
+}
+
+@keyframes popx{
+  from{left:-4rem;}
+  10%{left:0;}
+  80%{left: 0;}
+  to{left:-4rem;}
+}
+
+/* menu section */
+.menu{
+  display: flex;
+  justify-content: center;
+  padding: 0 8%;
+  flex-direction: column;
+  background: url("img3.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.menu h2{
+  text-align: center;
+  position: relative;
+  top: -3rem;
+  color: orange;
+  font-size: 3rem;
+  font-family:  'Merriweather', serif;
+  text-shadow: black 2px 2px 2px;
+}
+.menu .menucont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+}
+.menu .menupic{
+  width: 15vw;
+  margin: 0 3rem;
+}
+.menupic:hover{
+  scale: 1.4;
+  transition-duration: 0.7s;
+}
+
+/* reservation */
+.reserve{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 8%;
+  background: url("img2.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  color: white;
+}
+.reserve .heading{
+  position: relative;
+  top: 5rem;
+}
+.reserve .heading h2{
+  color: orange;
+  font-size: 3rem;
+  font-family:  'Merriweather', serif;
+  text-shadow: black 2px 2px 2px;
+  text-align: center;
+}
+.reserve .heading p{
+  text-shadow: black 2px 2px 2px;
+  text-align: center;
+  color: var(--bg);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.reserve form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.reservecont{
+  position: relative;
+  top: 5rem;
+}
+.reservecont .reservetype{
+  margin: 2rem 0 0;
+  text-align: center;
+}
+.reservecont .reservetype select{
+  background-color: var(--bg);
+  border: orange 2px solid;
+  padding: 0.2rem;
+}
+.reservecont .reserveinfo{
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+.reservecont .reserveinfo input{
+  background-color: var(--bg);
+  border: orange 2px solid;
+  padding: 0.2rem;
+}
+.reservecont .rinfo{
+  margin: 0 1.5rem;
+}
+.reservecont .userinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reservecont .userinfo input{
+  background-color: var(--bg);
+  border: orange 2px solid;
+  padding: 0.3rem;
+  margin: 0 2rem;
+  width: 25vw;
+}
+.reservecont form button {
+  background-color: var(--c2);
+  border: var(--c1) 2px solid;
+  padding: 0.6rem 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+.contact{
+  background-image: linear-gradient(rgb(43, 39, 39),grey,rgb(43, 39, 39));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact h2{
+  color: orange;
+  font-size: 3rem;
+  font-family:  'Merriweather', serif;
+  text-shadow: black 2px 2px 2px;
+  text-align: center;
+}
+.contact p{
+  text-shadow: black 2px 2px 2px;
+  color: var(--bg);
+  font-size: 1.2rem;
+  margin: 1rem 0 1rem;
+}
+.contact .contactcont{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: orange 2px solid;
+  border-radius: 3rem;
+  padding: 1.5rem;
+  margin: 2rem 1.5rem 1.5rem;
+  background-color: rgb(54, 54, 54);
+}
+.contact .contactcont .details{
+  color: white;
+}
+.details .mail a{
+  color: white;
+}
+.details .det{
+  margin: 1.5rem;
+  margin-left: 0;
+}
+.det .icons{
+  border: 1.5px solid orange;
+  padding: 0.1rem;
+}
+.det a:hover{
+  text-decoration: underline white;
+  .icons{
+    color:orange;
+  }
+}
+.contact .map iframe{
+  height: 50vh;
+  width: 40vw;
+  border: orange 3px solid;
+}
+.contact .map{
+  margin: 2rem;
+}
+.footer{
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding:1.5rem 9%;
+  color: rgba(0, 0, 0, 0.74);
+  background: var(--bg1);
+}
+/* mobile responsive */
+
+@media screen and (max-aspect-ratio: 1150/800) {
+  #option{
+    display: block;
+    position: relative;
+    top: 3px;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    padding: 1rem 4%;
+    background: var(--bg2);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.2);
+    transition: .25s ease;
+    transition-delay: .25s;
+  }
+  .navbar.active{
+    left: 0;
+    transition-delay: 0s;
+  }
+  .navbar a{
+    display: block;
+    background-color: orange;
+    border: var(--c2) 2px solid;
+    padding: 5px;
+    margin: 5px 18px;
+    font-size: 0.9rem;
+    text-shadow: none;
+  }
+  .navbar a:hover {
+    color: var(--c2);
+  }
+  .home .homecont h1{
+    font-size: 3.5rem;
+  }
+  .home .homecont h3{
+    font-size: 1.1rem;
+  }
+  .home .homecont p{
+    font-size: 1rem;
+    width: unset;
+    text-align: justify;
+  }
+  .menu{
+    height: unset;
+    padding-bottom: 3rem;
+  }
+  .menu h2{
+    top: 0;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .menu .menucont{
+    width: unset;
+    flex-direction: column;
+    margin: 0;
+  }
+  .menu .menupic{
+    margin: 0.7rem;
+    width: 80vw;
+  }
+  .menu .menupic:hover{
+    scale: 1;
+    transition-duration: 0.7s;
+  }
+  .reserve .heading,.reservecont{
+    top: 2rem;
+  }
+  .reserve .heading p{
+    text-align: justify;
+  }
+  .reserve .reservecont .reservetype{
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+  .reserve .reservecont .reserveinfo{
+    margin: 1rem 0;
+  }
+  .reservecont .reserveinfo{
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  .reservecont .reserveinfo .rinfo{
+    margin: 0.5rem;
+  }
+  .reservecont .userinfo {
+    flex-direction: column;
+  }
+  .reservecont .userinfo input{
+    width: 70vw;
+    margin: 0.5rem;
+  }
+  .contact .contactcont{
+    flex-direction: column;
+  }
+  .contact .map iframe{
+    height: 30vh;
+    width: 60vw;
+    border: orange 3px solid;
+  }
+  .contact p{
+    text-align: center;
+  }
+  .details .mail,.details .phone{
+    text-align: center;
+  }
+  .footer{
+    padding:2vh 5vw;
+    font-size: 0.8rem;
+  }
+}
